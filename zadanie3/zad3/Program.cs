@@ -21,7 +21,7 @@ namespace zad3
 
         public void WypiszInfo()
         {
-            Console.WriteLine("{0} {1} {2}", imie, nazwisko, dataUrodzenia);
+            Console.WriteLine("\n{0} {1} {2}", imie, nazwisko, dataUrodzenia);
         }
     }
 
@@ -41,11 +41,12 @@ namespace zad3
         public new void WypiszInfo()
         {
             base.WypiszInfo();
-            Console.WriteLine("Pozycja: {0}, klub {1}, liczba goli: {2}", pozycja, klub, liczbaGoli);
+            Console.WriteLine("Pozycja: {0}, klub {1}, liczba zdobytych bramek: {2}", pozycja, klub, liczbaGoli);
         }
 
         public void StrzelGola()
         {
+            liczbaGoli++;
             Console.WriteLine("\nGol !!! Strzelcem jest: {0} {1}\n", imie, nazwisko);
         }
     }
@@ -198,6 +199,7 @@ namespace zad3
 
             pilkarz.WypiszInfo();
             pilkarz.StrzelGola();
+            pilkarz.WypiszInfo();
             pilkarzReczny.WypiszInfo();
             pilkarzReczny.StrzelGola();
             pilkarzNozny.WypiszInfo();
